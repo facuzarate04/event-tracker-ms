@@ -5,13 +5,8 @@ import { get } from "./schema";
 export async function getEvents(req: Request, res: Response): Promise<Response> {
     try {
         const query = await validateGetEventsRequest(req.query);
-        const event = await get(query);
-        if(event) {
-            return res.json(event);
-        }
-        return res.status(404).json({
-            message: 'Event not found'
-        });
+        const events = await get(query);
+        return res.json(events);
     } catch (error) {
         return res.status(500).json({ message: error });
     }

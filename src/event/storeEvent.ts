@@ -17,7 +17,7 @@ export async function storeEvent(req: Request, res: Response): Promise<Response>
 
 interface IStoreEventRequest {
     name: string;
-    properties: any;
+    properties: object;
 }
 
 interface IValidationError {
@@ -46,7 +46,7 @@ function validateStoreEventRequest(body: IStoreEventRequest): Promise<IStoreEven
             field: 'properties',
             message: 'Properties is required'
         });
-    } 
+    }
 
     if(result.messages.length > 0) {
         return Promise.reject(result);
