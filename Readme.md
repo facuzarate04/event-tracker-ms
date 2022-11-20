@@ -15,11 +15,11 @@
 - Se guarda el event con el `name` y las `properties` ingresadas en el body
 
 **Interfaz REST**
-`POST: v1/event`
+- `POST: v1/event`
 *Headers*
-Authorization: Bearer token
+- Authorization: Bearer token
 *Response*
-`200 OK` si se crea el Event
+- `200 OK` si se crea el Event
 
 
 ### CU: Obtener eventos
@@ -32,11 +32,11 @@ Authorization: Bearer token
 - Se devuelve una collection que puede ser vacía o no, de acuerdo a la cantidad de events que devuelva la busqueda anterior
 
 **Interfaz REST**
-`GET: v1/events?name={name}`
+- `GET: v1/events?name={name}`
 *Headers*
-Authorization: Bearer token
+- Authorization: Bearer token
 *Response*
-`200 OK` Independientemente de la longitud de la lista obtenida
+- `200 OK` Independientemente de la longitud de la lista obtenida
 
 ```json
 {
