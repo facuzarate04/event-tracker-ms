@@ -34,7 +34,6 @@ export async function get(query: any): Promise<IEvent[]> {
             createdAt: -1
         })
         .exec();
-        
         return Promise.resolve(events);
     } catch (error) {
         return Promise.reject(error);
